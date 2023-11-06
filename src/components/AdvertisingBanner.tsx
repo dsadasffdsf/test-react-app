@@ -1,7 +1,5 @@
 import React from 'react';
-// import bestSeller from '../source/bestseller.png';
-import bestSeller from '../source/bestseller.png';
-
+import bestSeller from '../source/bestseller.png'; 
 
 function AdvertisingBanner() {
   return (
@@ -26,3 +24,5 @@ function AdvertisingBanner() {
 }
 
 export default AdvertisingBanner;
+
+

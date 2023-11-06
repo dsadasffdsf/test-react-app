@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import headerLogo from '../source/header-logo.png';
 import headerLoop from '../source/header-loop.png';
-import headerBasket from '../source/header-basket.png';
 import headerUser from '../source/header-user.png';
-import headerLike from '../source/header-like.png';
+
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../redux/store';
 
 function Header() {
+  // const count = useSelector((state: RootState) => state.counter.value)
+  // console.log(`count`, count);
   return (
     <header className="mt-8 mb-8">
       <div className="flex ">

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import boots from '../source/boots.png';
+import { ProductProps } from '../types/interface';
 
-function Product({ product }) {
+
+const Product: FC<ProductProps> = ({ product }) => {
   const { id, name, price, description } = product;
   return (
     <li className="bg-[#212123] rounded-[8px] h-[17rem]">
@@ -28,3 +30,4 @@ function Product({ product }) {
 }
 
 export default Product;
+
