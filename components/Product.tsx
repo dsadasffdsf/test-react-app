@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import boots from '../source/boots.png';
-import { ProductProps } from '../types/interface';
+import boots from '@/public/source/boots.png';
+import { ProductProps } from '@/types/interface';
+import Image from 'next/image';
 
 
 const Product: FC<ProductProps> = ({ product }) => {
@@ -9,7 +10,7 @@ const Product: FC<ProductProps> = ({ product }) => {
     <li className="bg-[#212123] rounded-[8px] h-[17rem]">
       <div className="flex justify-between flex-col h-full">
         <div className="h-[140px] w-full object-cover">
-          <img className="w-full h-auto" src={boots} alt="product" />
+          <Image className="w-full h-auto" src={boots} alt="product" />
         </div>
         <div className="pl-2 ">
           <div className="">

@@ -10,8 +10,8 @@ function Categories() {
         </li>
       </ul>
       <div className="flex justify-between text-[#576067] mt-4">
-        <div>Help</div>
-        <div>Terms & Conditions</div>
+        <h5>Help</h5>
+        <h5>Terms & Conditions</h5>
       </div>
     </section>
   );

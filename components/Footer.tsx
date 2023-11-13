@@ -1,9 +1,11 @@
 import React from 'react';
-import headerLogo from '../source/header-logo.png';
+import headerLogo from '@/public/source/header-logo.png';
+import Image from 'next/image';
+
 function Footer() {
   return (
-    <footer className="flex flex-grow bg-[#191919] rounded-[6px] mt-4 justify-between p-4 items-center">
-      <img src={headerLogo} alt="" />
+    <footer className="flex bg-[#191919] rounded-[6px] mt-4 justify-between p-4 items-center  ">
+      <Image src={headerLogo} alt="" />
       <p>Developed by Tomkovich</p>
       <ul className="flex space-x-4">
         <li>

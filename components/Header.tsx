@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import headerLogo from '../source/header-logo.png';
-import headerLoop from '../source/header-loop.png';
-import headerUser from '../source/header-user.png';
+import headerLogo from '@/public/source/header-logo.png';
+import headerLoop from '@/public/source/header-loop.png';
+import headerUser from '@/public/source/header-user.png';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from '../redux/store';
+// const navigation = [
+//   { id: 1, path: '/' },
+//   { id: 2, path: '/products/product' },
+// ];
 
 function Header() {
-  // const count = useSelector((state: RootState) => state.counter.value)
-  // console.log(`count`, count);
   return (
     <header className="mt-8 mb-8">
       <div className="flex ">
-        <img className="mr-[15rem] ml-4" src={headerLogo} alt="logo" />
+        <div className="bg-green-500">
+          <Link href="/" className="bg-red-500">
+            <Image className="mr-[15rem] ml-4" src={headerLogo} alt="logo" />
+          </Link>
+        </div>
+
         <div className="flex justify-between grow">
           <div className="flex items-center">
-            <img src={headerUser} alt="user" />
+            <Image src={headerUser} alt="user" />
             <h4 className="text-[#B8B8B8] px-4">User</h4>
           </div>
 
           <form className="flex m-auto relative">
-            <img className="w-4 h-4 self-center absolute left-4" src={headerLoop} alt="loop" />
+            <Image className="w-4 h-4 self-center absolute left-4" src={headerLoop} alt="loop" />
             <input
               className="bg-[#191919] text-[#B8B8B8] px-12 py-2 w-[20rem] border-[#191919] rounded-[6px]"
               type="text"
@@ -29,7 +37,6 @@ function Header() {
           </form>
 
           <div className="ml-auto flex">
-            {/* <img src={headerLike} alt="like" /> */}
             <div className="self-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +54,6 @@ function Header() {
               </svg>
             </div>
 
-            {/* <img src={headerBasket} alt="basket" /> */}
             <div className="self-center ml-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

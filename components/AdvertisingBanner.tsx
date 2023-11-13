@@ -1,5 +1,7 @@
 import React from 'react';
-import bestSeller from '../source/bestseller.png'; 
+import bestSeller from '@/public/source/bestseller.png'; 
+import Image from 'next/image';
+
 
 function AdvertisingBanner() {
   return (
@@ -15,7 +17,7 @@ function AdvertisingBanner() {
             </a>
           </div>
           <div className="">
-            <img className="absolute right-0 top-0" src={bestSeller} alt="bestSeller" />
+            <Image className="absolute right-0 top-0" src={bestSeller} alt="bestSeller" />
           </div>
         </div>
       </div>
