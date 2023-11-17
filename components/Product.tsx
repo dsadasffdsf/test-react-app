@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import boots from '@/public/source/boots.png';
-import { ProductProps } from '@/types/interface';
+import { ProductProps} from '@/types/interface';
 import Image from 'next/image';
 
 

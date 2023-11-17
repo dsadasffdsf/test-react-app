@@ -1,8 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import bootsDetalMax from '@/public/source/detalBoots-max.png';
+import { useRouter } from 'next/router';
+import { ProductProps} from '@/types/interface';
 
-const DetalProduct = () => {
+const DetalProduct: React.FC<ProductProps> = ({product}) => {
+
+  
+  const {} = product
   return (
     <section className="bg-[#191919] rounded-[6px] p-4 ml-4 h-[500px] flex-grow">
       <div className="grow flex">

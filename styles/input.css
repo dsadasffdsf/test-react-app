@@ -84,3 +84,21 @@ body {
   background: #212123;
   padding: 5px;
 }
+.n-active_basket{
+  width: 25px;
+  height: 25px;
+  background: #576067;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.active_basket{
+  width: 25px;
+  height: 25px;
+  background: #6C3EB8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}

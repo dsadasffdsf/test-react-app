@@ -1,17 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import headerLogo from '@/public/source/header-logo.png';
 import headerLoop from '@/public/source/header-loop.png';
 import headerUser from '@/public/source/header-user.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { AppDispatch, store } from '@/redux/store';
+// import { fetchProduct, fetchProductId } from '@/redux/slices/productApiSlice';
+import { fetchProductId, fetchProduct } from '@/redux/slices/productApiSlice';
+import { useDispatch,useSelector } from 'react-redux';
 
-// const navigation = [
-//   { id: 1, path: '/' },
-//   { id: 2, path: '/products/product' },
-// ];
 
-function Header() {
+const Header = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const qwe = useSelector(state=> state.productApi.products)
+  console.log(qwe);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dataProduct = await dispatch(fetchProductId("1"));
+        console.log(dataProduct, "dataProduct-------------");
+      } catch (error) {
+        console.error('Error fetching product data:', error);
+      }
+    };
+  
+    fetchData()
+    
+  }, []);
+
   return (
     <header className="mt-8 mb-8">
       <div className="flex ">
@@ -72,6 +90,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;
